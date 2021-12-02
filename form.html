@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Doc</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    </head>
+    <body class="body">
+        <h1><u>The Ultimate Data Form</u></h1>
+        
+        <div id="begin-form">
+          <button data-toggle="collapse" href="#collapse" onclick="hide()" type="button" class="btn btn-dark">Begin Form</button>
+        </div>
+
+        <form id="collapse" class="panel-collapse collapse" action="./submission.html">
+          <!-- This will create a nice flexible grid using Bootstrap built in functions -->
+          <!-- Remember that the Bootstrap works with 12 columns, so all columns must add to 12 -->
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputFName">First Name</label>
+              <input type="text" class="form-control" id="inputFName" placeholder="First name" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputMName">Middle Name</label>
+              <input type="text" class="form-control" id="inputMName" placeholder="Middle name">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputSName">Surname/s</label>
+              <input type="text" class="form-control" id="inputSName" placeholder="Surname/s" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputDOB">Date of Birth </label>
+              <input type="date" class="form-control" id="inpuDOB" placeholder="" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputPicture">Picture of yourself</label>
+              <input type="file" class="form-control" id="inpuPicture" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="Street name and door number" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Flat, studio, or floor">
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" required>
+              </div>
+              <!-- This will create a drop down menu to select stuff -->
+              <div class="form-group col-md-4">
+                <label for="inputState">County</label>
+                <!-- I collapse this cause it was 48 entries and I cba -->
+                <select id="inputState" class="form-control" required>
+                  <option selected>Choose...</option>
+                  <option>Bedfordshire</option>
+                  <option>Berkshire</option>
+                  <option>Bristol</option>
+                  <option>Buckinghamshire</option>
+                  <option>Cambridgeshire</option>
+                  <option>Cheshire</option>
+                  <option>City of London</option>
+                  <option>Cornwall</option>
+                  <option>Cumbria</option>
+                  <option>Derbyshire</option>
+                  <option>Devon</option>
+                  <option>Dorset</option>
+                  <option>Durham</option>
+                  <option>East Riding of Yorkshire</option>
+                  <option>East Sussex</option>
+                  <option>Essex</option>
+                  <option>Gloucestershire</option>
+                  <option>Greater London</option>
+                  <option>Greater Manchester</option>
+                  <option>Hampshire</option>
+                  <option>Herefordshire</option>
+                  <option>Hertfordshire</option>
+                  <option>Isle of Wight</option>
+                  <option>Kent</option>
+                  <option>Lancanshire</option>
+                  <option>Leicestershire</option>
+                  <option>Lincolnshire</option>
+                  <option>Merseyside</option>
+                  <option>Norfolk</option>
+                  <option>North Yorkshire</option>
+                  <option>Northamptonshire</option>
+                  <option>Northumbeland</option>
+                  <option>Nottinghamshire</option>
+                  <option>Oxfordshire</option>
+                  <option>Rutland</option>
+                  <option>Shropshire</option>
+                  <option>Somerset</option>
+                  <option>South Yorkshire</option>
+                  <option>Staffordshire</option>
+                  <option>Suffolk</option>
+                  <option>Surrey</option>
+                  <option>Tyne and Wear</option>
+                  <option>Warwickshire</option>
+                  <option>West Midlands</option>
+                  <option>West Sussex</option>
+                  <option>West Yorkshire</option>
+                  <option>Wiltshire</option>
+                  <option>Worcerstershire</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputPostCode">Postal Code</label>
+                <input type="text" class="form-control" id="inputPostCode" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                <label class="form-check-label" for="gridCheck">
+                  <a href="t&c.html" target="_blank">Click here to accept the Terms and Conditions</a>
+                </label>
+              </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+            <a href="form.html"><button" class="btn btn-secondary">Cancel form</button></a>
+          </form>
+
+          <footer>
+            <p>Disclaimer: Everything that you fill in this form, we already know. We just want to give you the illusion that there is still data that you have not given conciously.</p>
+          </footer>
+
+          <script>
+            function hide() {
+              document.getElementById("begin-form").style.display = 'none';
+            }
+          </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,29 @@
+.body{
+    background-color:turquoise;
+}
+h1{
+    text-align: center;
+    
+}
+p{
+    text-align: center;
+    color: black;
+    font-size: small;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+form{
+    border: 1px solid grey;
+    border-radius: 15px;
+    background-color:rgb(211, 211, 211);
+    padding: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#begin-form{
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
